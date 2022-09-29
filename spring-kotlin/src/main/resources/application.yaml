@@ -1,0 +1,23 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  datasource:
+    url: jdbc:h2:file:${user.home}/kotlin-tutorial/db
+    #this is just an example: Do put your credentials in a real app. Use env variables or app args instead
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
